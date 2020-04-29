@@ -3,28 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E9ADCBF904F6E8B8BD0D890 /* Pods_Stone_StoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D28E0465A5C4E311B2EF87 /* Pods_Stone_StoneTests.framework */; };
+		39C6CCCEB347D113A1D6E7EB /* Pods_Stone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196D18CF91401485F4D7ED /* Pods_Stone.framework */; };
+		F53897F92454B5DA00261666 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53897F82454B5DA00261666 /* ApiRouter.swift */; };
+		F53897FD2454BF6600261666 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53897FC2454BF6600261666 /* Constants.swift */; };
+		F53898042454C85100261666 /* ChuckNorrisFactst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53898032454C85100261666 /* ChuckNorrisFactst.swift */; };
+		F538980624550D9400261666 /* ResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538980524550D9400261666 /* ResponsePayload.swift */; };
+		F53898092455C7FC00261666 /* FactProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53898082455C7FC00261666 /* FactProtocol.swift */; };
+		F55F489E2457C5970052D8CC /* FactListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F489D2457C5970052D8CC /* FactListWorker.swift */; };
+		F56C921A2457899D00F496DF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56C92192457899D00F496DF /* Response.swift */; };
+		F56C921C24578E4C00F496DF /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56C921B24578E4C00F496DF /* Fact.swift */; };
 		F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830D7E2454A57C000BD470 /* AppDelegate.swift */; };
 		F5830D832454A57C000BD470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830D822454A57C000BD470 /* ViewController.swift */; };
 		F5830D862454A57C000BD470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5830D842454A57C000BD470 /* Main.storyboard */; };
 		F5830D882454A57E000BD470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5830D872454A57E000BD470 /* Assets.xcassets */; };
 		F5830D8B2454A57E000BD470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5830D892454A57E000BD470 /* LaunchScreen.storyboard */; };
-		F5830D962454A57E000BD470 /* StoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830D952454A57E000BD470 /* StoneTests.swift */; };
 		F5830DA12454A57E000BD470 /* StoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830DA02454A57E000BD470 /* StoneUITests.swift */; };
+		F5830DB32454AA0A000BD470 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830DB22454AA0A000BD470 /* API.swift */; };
+		F5EADD6824576FC700D5F5A2 /* ChuckNorrisFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EADD6724576FC700D5F5A2 /* ChuckNorrisFactsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F5830D922454A57E000BD470 /* PBXContainerItemProxy */ = {
+		F5830D9D2454A57E000BD470 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5830D732454A57C000BD470 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F5830D7A2454A57C000BD470;
 			remoteInfo = Stone;
 		};
-		F5830D9D2454A57E000BD470 /* PBXContainerItemProxy */ = {
+		F59E2BB924576A3B0024A627 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5830D732454A57C000BD470 /* Project object */;
 			proxyType = 1;
@@ -34,6 +45,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23196D18CF91401485F4D7ED /* Pods_Stone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA52024F5BDE105A0F79CFC /* Pods-StoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoneTests.debug.xcconfig"; path = "Target Support Files/Pods-StoneTests/Pods-StoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		92F6E52E23B1FBFB43727E13 /* Pods-Stone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.release.xcconfig"; path = "Target Support Files/Pods-Stone/Pods-Stone.release.xcconfig"; sourceTree = "<group>"; };
+		B33226E6FAFE21B2BE4E4D5F /* Pods-Stone-StoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone-StoneTests.release.xcconfig"; path = "Target Support Files/Pods-Stone-StoneTests/Pods-Stone-StoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9B573AE6147AF2C738E3ACB /* Pods-Stone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone.debug.xcconfig"; path = "Target Support Files/Pods-Stone/Pods-Stone.debug.xcconfig"; sourceTree = "<group>"; };
+		E86F9C2083FE50B46630187D /* Pods-Stone-StoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone-StoneTests.debug.xcconfig"; path = "Target Support Files/Pods-Stone-StoneTests/Pods-Stone-StoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D28E0465A5C4E311B2EF87 /* Pods_Stone_StoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stone_StoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53897F82454B5DA00261666 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		F53897FC2454BF6600261666 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F53898032454C85100261666 /* ChuckNorrisFactst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactst.swift; sourceTree = "<group>"; };
+		F538980524550D9400261666 /* ResponsePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePayload.swift; sourceTree = "<group>"; };
+		F53898082455C7FC00261666 /* FactProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactProtocol.swift; sourceTree = "<group>"; };
+		F55F489D2457C5970052D8CC /* FactListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactListWorker.swift; sourceTree = "<group>"; };
+		F56C92192457899D00F496DF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		F56C921B24578E4C00F496DF /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		F5830D7B2454A57C000BD470 /* Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5830D7E2454A57C000BD470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5830D822454A57C000BD470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,12 +67,15 @@
 		F5830D872454A57E000BD470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5830D8A2454A57E000BD470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5830D8C2454A57E000BD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5830D912454A57E000BD470 /* StoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5830D952454A57E000BD470 /* StoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneTests.swift; sourceTree = "<group>"; };
-		F5830D972454A57E000BD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5830D9C2454A57E000BD470 /* StoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5830DA02454A57E000BD470 /* StoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneUITests.swift; sourceTree = "<group>"; };
 		F5830DA22454A57E000BD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5830DB22454AA0A000BD470 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F59E2BB424576A3B0024A627 /* StoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F59E2BB824576A3B0024A627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5EADD6624576FC600D5F5A2 /* StoneTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoneTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F5EADD6724576FC700D5F5A2 /* ChuckNorrisFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsTests.swift; sourceTree = "<group>"; };
+		FBE7B9F7042B09144AA80B88 /* Pods-StoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoneTests.release.xcconfig"; path = "Target Support Files/Pods-StoneTests/Pods-StoneTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5830D8E2454A57E000BD470 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				39C6CCCEB347D113A1D6E7EB /* Pods_Stone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,16 +94,99 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F59E2BB124576A3B0024A627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9ADCBF904F6E8B8BD0D890 /* Pods_Stone_StoneTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08C23AC6732FC4369D1AE9B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9B573AE6147AF2C738E3ACB /* Pods-Stone.debug.xcconfig */,
+				92F6E52E23B1FBFB43727E13 /* Pods-Stone.release.xcconfig */,
+				5FA52024F5BDE105A0F79CFC /* Pods-StoneTests.debug.xcconfig */,
+				FBE7B9F7042B09144AA80B88 /* Pods-StoneTests.release.xcconfig */,
+				E86F9C2083FE50B46630187D /* Pods-Stone-StoneTests.debug.xcconfig */,
+				B33226E6FAFE21B2BE4E4D5F /* Pods-Stone-StoneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3CA5E872E300B5798A08DE6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23196D18CF91401485F4D7ED /* Pods_Stone.framework */,
+				F2D28E0465A5C4E311B2EF87 /* Pods_Stone_StoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F53897FE2454C11300261666 /* Response Model */ = {
+			isa = PBXGroup;
+			children = (
+				F538980524550D9400261666 /* ResponsePayload.swift */,
+			);
+			path = "Response Model";
+			sourceTree = "<group>";
+		};
+		F53898012454C82300261666 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F5830DB22454AA0A000BD470 /* API.swift */,
+				F53897F82454B5DA00261666 /* ApiRouter.swift */,
+				F53897FC2454BF6600261666 /* Constants.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F53898022454C83500261666 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				F53898032454C85100261666 /* ChuckNorrisFactst.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		F53898072455C76600261666 /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				F55F489D2457C5970052D8CC /* FactListWorker.swift */,
+				F53898082455C7FC00261666 /* FactProtocol.swift */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		F538980A2455DD4600261666 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F56C92192457899D00F496DF /* Response.swift */,
+				F56C921B24578E4C00F496DF /* Fact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F56C921D2457BA7A00F496DF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		F5830D722454A57C000BD470 = {
 			isa = PBXGroup;
 			children = (
 				F5830D7D2454A57C000BD470 /* Stone */,
-				F5830D942454A57E000BD470 /* StoneTests */,
 				F5830D9F2454A57E000BD470 /* StoneUITests */,
+				F59E2BB524576A3B0024A627 /* StoneTests */,
 				F5830D7C2454A57C000BD470 /* Products */,
+				08C23AC6732FC4369D1AE9B5 /* Pods */,
+				3CA5E872E300B5798A08DE6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				F5830D7B2454A57C000BD470 /* Stone.app */,
-				F5830D912454A57E000BD470 /* StoneTests.xctest */,
 				F5830D9C2454A57E000BD470 /* StoneUITests.xctest */,
+				F59E2BB424576A3B0024A627 /* StoneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,22 +203,17 @@
 		F5830D7D2454A57C000BD470 /* Stone */ = {
 			isa = PBXGroup;
 			children = (
+				F56C921D2457BA7A00F496DF /* Repository */,
 				F5830DB02454A73C000BD470 /* AppDelegate */,
+				F538980A2455DD4600261666 /* Model */,
+				F53898072455C76600261666 /* Facts */,
+				F5830DB12454A9F8000BD470 /* API */,
 				F5830DAF2454A664000BD470 /* Resources */,
 				F5830D822454A57C000BD470 /* ViewController.swift */,
 				F5830D842454A57C000BD470 /* Main.storyboard */,
 				F5830D892454A57E000BD470 /* LaunchScreen.storyboard */,
 			);
 			path = Stone;
-			sourceTree = "<group>";
-		};
-		F5830D942454A57E000BD470 /* StoneTests */ = {
-			isa = PBXGroup;
-			children = (
-				F5830D952454A57E000BD470 /* StoneTests.swift */,
-				F5830D972454A57E000BD470 /* Info.plist */,
-			);
-			path = StoneTests;
 			sourceTree = "<group>";
 		};
 		F5830D9F2454A57E000BD470 /* StoneUITests */ = {
@@ -141,6 +242,34 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		F5830DB12454A9F8000BD470 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F53897FE2454C11300261666 /* Response Model */,
+				F53898022454C83500261666 /* Client */,
+				F53898012454C82300261666 /* Core */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F59E2BB524576A3B0024A627 /* StoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5EADD692457708000D5F5A2 /* Chuck Norris Facts */,
+				F5EADD6624576FC600D5F5A2 /* StoneTests-Bridging-Header.h */,
+				F59E2BB824576A3B0024A627 /* Info.plist */,
+			);
+			path = StoneTests;
+			sourceTree = "<group>";
+		};
+		F5EADD692457708000D5F5A2 /* Chuck Norris Facts */ = {
+			isa = PBXGroup;
+			children = (
+				F5EADD6724576FC700D5F5A2 /* ChuckNorrisFactsTests.swift */,
+			);
+			path = "Chuck Norris Facts";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5830DA52454A57E000BD470 /* Build configuration list for PBXNativeTarget "Stone" */;
 			buildPhases = (
+				5E422A9CEBB80D4391FE6F81 /* [CP] Check Pods Manifest.lock */,
 				F5830D772454A57C000BD470 /* Sources */,
 				F5830D782454A57C000BD470 /* Frameworks */,
 				F5830D792454A57C000BD470 /* Resources */,
+				52C64250169E148EE14356F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,24 +291,6 @@
 			productName = Stone;
 			productReference = F5830D7B2454A57C000BD470 /* Stone.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F5830D902454A57E000BD470 /* StoneTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5830DA82454A57E000BD470 /* Build configuration list for PBXNativeTarget "StoneTests" */;
-			buildPhases = (
-				F5830D8D2454A57E000BD470 /* Sources */,
-				F5830D8E2454A57E000BD470 /* Frameworks */,
-				F5830D8F2454A57E000BD470 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F5830D932454A57E000BD470 /* PBXTargetDependency */,
-			);
-			name = StoneTests;
-			productName = StoneTests;
-			productReference = F5830D912454A57E000BD470 /* StoneTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F5830D9B2454A57E000BD470 /* StoneUITests */ = {
 			isa = PBXNativeTarget;
@@ -197,6 +310,26 @@
 			productReference = F5830D9C2454A57E000BD470 /* StoneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F59E2BB324576A3B0024A627 /* StoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F59E2BBB24576A3B0024A627 /* Build configuration list for PBXNativeTarget "StoneTests" */;
+			buildPhases = (
+				B793A235E54E05A2C585F476 /* [CP] Check Pods Manifest.lock */,
+				F59E2BB024576A3B0024A627 /* Sources */,
+				F59E2BB124576A3B0024A627 /* Frameworks */,
+				F59E2BB224576A3B0024A627 /* Resources */,
+				554CCB90921C670E5A890944 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F59E2BBA24576A3B0024A627 /* PBXTargetDependency */,
+			);
+			name = StoneTests;
+			productName = StoneTests;
+			productReference = F59E2BB424576A3B0024A627 /* StoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,12 +343,13 @@
 					F5830D7A2454A57C000BD470 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					F5830D902454A57E000BD470 = {
+					F5830D9B2454A57E000BD470 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = F5830D7A2454A57C000BD470;
 					};
-					F5830D9B2454A57E000BD470 = {
+					F59E2BB324576A3B0024A627 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = F5830D7A2454A57C000BD470;
 					};
 				};
@@ -234,8 +368,8 @@
 			projectRoot = "";
 			targets = (
 				F5830D7A2454A57C000BD470 /* Stone */,
-				F5830D902454A57E000BD470 /* StoneTests */,
 				F5830D9B2454A57E000BD470 /* StoneUITests */,
+				F59E2BB324576A3B0024A627 /* StoneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,14 +385,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5830D8F2454A57E000BD470 /* Resources */ = {
+		F5830D9A2454A57E000BD470 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5830D9A2454A57E000BD470 /* Resources */ = {
+		F59E2BB224576A3B0024A627 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,21 +401,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52C64250169E148EE14356F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stone/Pods-Stone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stone/Pods-Stone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stone/Pods-Stone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		554CCB90921C670E5A890944 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stone-StoneTests/Pods-Stone-StoneTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stone-StoneTests/Pods-Stone-StoneTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stone-StoneTests/Pods-Stone-StoneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E422A9CEBB80D4391FE6F81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B793A235E54E05A2C585F476 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stone-StoneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5830D772454A57C000BD470 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53898042454C85100261666 /* ChuckNorrisFactst.swift in Sources */,
+				F55F489E2457C5970052D8CC /* FactListWorker.swift in Sources */,
+				F53897F92454B5DA00261666 /* ApiRouter.swift in Sources */,
+				F56C921C24578E4C00F496DF /* Fact.swift in Sources */,
+				F53898092455C7FC00261666 /* FactProtocol.swift in Sources */,
+				F538980624550D9400261666 /* ResponsePayload.swift in Sources */,
 				F5830D832454A57C000BD470 /* ViewController.swift in Sources */,
+				F53897FD2454BF6600261666 /* Constants.swift in Sources */,
+				F56C921A2457899D00F496DF /* Response.swift in Sources */,
+				F5830DB32454AA0A000BD470 /* API.swift in Sources */,
 				F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5830D8D2454A57E000BD470 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F5830D962454A57E000BD470 /* StoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,18 +509,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F59E2BB024576A3B0024A627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5EADD6824576FC700D5F5A2 /* ChuckNorrisFactsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F5830D932454A57E000BD470 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F5830D7A2454A57C000BD470 /* Stone */;
-			targetProxy = F5830D922454A57E000BD470 /* PBXContainerItemProxy */;
-		};
 		F5830D9E2454A57E000BD470 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F5830D7A2454A57C000BD470 /* Stone */;
 			targetProxy = F5830D9D2454A57E000BD470 /* PBXContainerItemProxy */;
+		};
+		F59E2BBA24576A3B0024A627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5830D7A2454A57C000BD470 /* Stone */;
+			targetProxy = F59E2BB924576A3B0024A627 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -444,9 +668,11 @@
 		};
 		F5830DA62454A57E000BD470 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9B573AE6147AF2C738E3ACB /* Pods-Stone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Stone/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +681,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.silva.rafael.Stone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -462,9 +689,11 @@
 		};
 		F5830DA72454A57E000BD470 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F6E52E23B1FBFB43727E13 /* Pods-Stone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Stone/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,50 +702,9 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.silva.rafael.Stone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		F5830DA92454A57E000BD470 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StoneTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.silva.rafael.StoneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stone.app/Stone";
-			};
-			name = Debug;
-		};
-		F5830DAA2454A57E000BD470 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StoneTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.silva.rafael.StoneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stone.app/Stone";
 			};
 			name = Release;
 		};
@@ -558,6 +746,53 @@
 			};
 			name = Release;
 		};
+		F59E2BBC24576A3B0024A627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E86F9C2083FE50B46630187D /* Pods-Stone-StoneTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StoneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silva.rafael.StoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StoneTests/StoneTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stone.app/Stone";
+			};
+			name = Debug;
+		};
+		F59E2BBD24576A3B0024A627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B33226E6FAFE21B2BE4E4D5F /* Pods-Stone-StoneTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StoneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silva.rafael.StoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StoneTests/StoneTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stone.app/Stone";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,20 +814,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5830DA82454A57E000BD470 /* Build configuration list for PBXNativeTarget "StoneTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F5830DA92454A57E000BD470 /* Debug */,
-				F5830DAA2454A57E000BD470 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F5830DAB2454A57E000BD470 /* Build configuration list for PBXNativeTarget "StoneUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5830DAC2454A57E000BD470 /* Debug */,
 				F5830DAD2454A57E000BD470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F59E2BBB24576A3B0024A627 /* Build configuration list for PBXNativeTarget "StoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F59E2BBC24576A3B0024A627 /* Debug */,
+				F59E2BBD24576A3B0024A627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

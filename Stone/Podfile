@@ -1,0 +1,17 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Stone' do
+    inhibit_all_warnings!
+    pod 'Alamofire', '5'
+    pod 'RxSwift', '~> 5'
+    pod 'RxCocoa', '~> 5'
+    
+    target 'StoneTests' do
+        inherit! :complete
+        pod 'RxTest', '~> 5'
+        pod 'RxBlocking', '~> 5'
+    end
+
+end
+
