@@ -1,32 +1,16 @@
 import Alamofire
 import RxSwift
 
-enum ApiError: Error {
-    case forbidden              //Status code 403
-    case notFound               //Status code 404
-    case conflict               //Status code 409
-    case internalServerError    //Status code 500
-    
-    var description: String {
-        switch self {
-        case .forbidden:
-            return "Forbidden error."
-        case .notFound:
-            return "The not found failed."
-        case .conflict:
-            return "Conflict error."
-        case .internalServerError:
-            return "Internal server error."
-        }
-    }
+protocol ApiProtocol {
+    func request<T: Decodable> (_ urlConvertible: URLRequestConvertible) -> Observable<T>
 }
 
-class API {
+class API: ApiProtocol {
     
     //MARK: - The request function to get results in an Observable
     init() {}
     
-    static func request<T: Decodable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
+    func request<T: Decodable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
         return Observable<T>.create { observer in
             
             let request = AF.request(urlConvertible).responseDecodable { (response: DataResponse<T, AFError>) in
@@ -47,7 +31,7 @@ class API {
                     case 500:
                         observer.onError(ApiError.internalServerError)
                     default:
-                        observer.onError(error)
+                        observer.onError(ApiError.unknownedError(error.localizedDescription))
                     }
                 }
             }

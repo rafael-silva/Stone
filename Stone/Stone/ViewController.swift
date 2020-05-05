@@ -1,34 +1,19 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     
     let disposeBag = DisposeBag()
+   // let viewModel = FactListViewModel(worker: FactListWorker())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let api = API()
+//        viewModel.output.facts.drive(onNext: { facts in print(facts) }).disposed(by: disposeBag)
+//        viewModel.input.textInput.accept("car")
+//        viewModel.input.reload.accept(())
         
-        api.getFacts(term: "Car")
-            .observeOn(MainScheduler.instance)
-            .retry(2)
-            .subscribe(onNext: { response in
-                let facts = response.result.map { Fact(output: $0) }
-                print("List of facts:", facts)
-            }, onError: { error in
-                switch error {
-                case ApiError.conflict:
-                    print("Conflict error")
-                case ApiError.forbidden:
-                    print("Forbidden error")
-                case ApiError.notFound:
-                    print("Not found error")
-                default:
-                    print("Unknown error:", error)
-                }
-            })
-            .disposed(by: disposeBag)
+        
     }
 }
-

@@ -7,7 +7,7 @@ protocol APIFactsProtocol: class {
 extension API: APIFactsProtocol {
 
     func getFacts(term: String) -> Observable<ResponsePayload> {
-        return API.request(ApiRouter.getFacts(term: term))
+        return API().request(ApiRouter.getFacts(term: term))
     }
     
 }

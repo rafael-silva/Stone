@@ -11,6 +11,9 @@ target 'Stone' do
         inherit! :complete
         pod 'RxTest', '~> 5'
         pod 'RxBlocking', '~> 5'
+        pod 'Nimble'
+        pod 'Quick'
+        pod 'NimbleRxTest'
     end
 
 end
