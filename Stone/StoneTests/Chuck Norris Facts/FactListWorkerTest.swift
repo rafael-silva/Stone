@@ -175,6 +175,7 @@ class FactListWorkerTest: QuickSpec {
     }
 }
 
+
 final class ApiFactsSpy: APIFactsProtocol {
     
     var response: ResponsePayload?
