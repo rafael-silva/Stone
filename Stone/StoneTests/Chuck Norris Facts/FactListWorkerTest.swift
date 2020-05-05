@@ -11,7 +11,7 @@ private let expectedfacts: [ResponsePayload.FactPayload] =
                                  icon_url: URL(fileURLWithPath: "https://assets.chucknorris.host/img/avatar/chuck-norris.png"),
                                  id: "13dfd2342352d",
                                  updated_at: "2020-01-05 13:42:18.823766",
-                                 url: URL(fileURLWithPath: "https://assets.chucknorris.host/img/avatar/chuck-norris.png"),
+                                 url: URL(fileURLWithPath: "https://assets.chucknorris.host"),
                                  value: "Chuck Norris let the dogs out Chuck Norris wants some more",
                                  categories: [])]
 
@@ -38,7 +38,7 @@ class FactListWorkerTest: QuickSpec {
                 context("and the request was completed with a valid response") {
                    
                     it("then should return a response") {
-                        apiSpy.response = ResponsePayload(total: 308, result: expectedfacts)
+                        apiSpy.response = ResponsePayload.mock()
                         
                         let observer = scheduler.createObserver(ResponsePayload.self)
                         
