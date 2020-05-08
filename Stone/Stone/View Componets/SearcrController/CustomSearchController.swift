@@ -4,7 +4,7 @@ protocol CustomSearchControllerDelegate: class {
     func didTouchOnSearchButton(_ searchBar: UISearchBar)
 }
 
-class CustomSearchController: UISearchController {
+final class CustomSearchController: UISearchController {
     
     var customSearchBar: CustomSearchBar!
     var customSearchDelegate: CustomSearchControllerDelegate?

@@ -9,6 +9,7 @@ final class FactListSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: Properties
+    
     private let disposeBag = DisposeBag()
     private let viewModel = FactListViewModel(worker: FactListWorker())
     
