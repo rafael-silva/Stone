@@ -1,13 +1,12 @@
 import RxSwift
 
-
 protocol FactListWorkerDataSource: class {
     func fetch(term: String) -> Observable<[Fact]>
 }
 
 final class FactListWorker: FactListWorkerDataSource {
     
-    let api: APIFactsProtocol
+    private let api: APIFactsProtocol
     
     init(api: APIFactsProtocol = API()) {
         self.api = api

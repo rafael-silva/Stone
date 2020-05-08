@@ -10,6 +10,10 @@
 		1E9ADCBF904F6E8B8BD0D890 /* Pods_Stone_StoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D28E0465A5C4E311B2EF87 /* Pods_Stone_StoneTests.framework */; };
 		39C6CCCEB347D113A1D6E7EB /* Pods_Stone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23196D18CF91401485F4D7ED /* Pods_Stone.framework */; };
 		F521CAAB2460526A008B02C6 /* FactListWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521CAAA2460526A008B02C6 /* FactListWorkerTest.swift */; };
+		F521CAAD2461DE9F008B02C6 /* FactViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521CAAC2461DE9F008B02C6 /* FactViewModelTests.swift */; };
+		F521CAAF2461DEA9008B02C6 /* FactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521CAAE2461DEA9008B02C6 /* FactListViewModel.swift */; };
+		F521CAB22461E2EA008B02C6 /* MockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521CAB12461E2EA008B02C6 /* MockProtocol.swift */; };
+		F521CAB4246226DD008B02C6 /* FactListSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F521CAB3246226DC008B02C6 /* FactListSearchViewController.swift */; };
 		F53897F92454B5DA00261666 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53897F82454B5DA00261666 /* ApiRouter.swift */; };
 		F53897FD2454BF6600261666 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53897FC2454BF6600261666 /* Constants.swift */; };
 		F53898042454C85100261666 /* ChuckNorrisFactst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53898032454C85100261666 /* ChuckNorrisFactst.swift */; };
@@ -25,6 +29,8 @@
 		F5830DA12454A57E000BD470 /* StoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830DA02454A57E000BD470 /* StoneUITests.swift */; };
 		F5830DB32454AA0A000BD470 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830DB22454AA0A000BD470 /* API.swift */; };
 		F596F603245C6AD0004A2401 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596F602245C6AD0004A2401 /* ApiError.swift */; };
+		F59905B224636043005F8B60 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59905B124636043005F8B60 /* CustomSearchBar.swift */; };
+		F59905B524636F63005F8B60 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59905B424636F63005F8B60 /* CustomSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,10 @@
 		E86F9C2083FE50B46630187D /* Pods-Stone-StoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stone-StoneTests.debug.xcconfig"; path = "Target Support Files/Pods-Stone-StoneTests/Pods-Stone-StoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2D28E0465A5C4E311B2EF87 /* Pods_Stone_StoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stone_StoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F521CAAA2460526A008B02C6 /* FactListWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListWorkerTest.swift; sourceTree = "<group>"; };
+		F521CAAC2461DE9F008B02C6 /* FactViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactViewModelTests.swift; sourceTree = "<group>"; };
+		F521CAAE2461DEA9008B02C6 /* FactListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactListViewModel.swift; sourceTree = "<group>"; };
+		F521CAB12461E2EA008B02C6 /* MockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProtocol.swift; sourceTree = "<group>"; };
+		F521CAB3246226DC008B02C6 /* FactListSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListSearchViewController.swift; sourceTree = "<group>"; };
 		F53897F82454B5DA00261666 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		F53897FC2454BF6600261666 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F53898032454C85100261666 /* ChuckNorrisFactst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactst.swift; sourceTree = "<group>"; };
@@ -72,6 +82,8 @@
 		F5830DA22454A57E000BD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5830DB22454AA0A000BD470 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F596F602245C6AD0004A2401 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F59905B124636043005F8B60 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		F59905B424636F63005F8B60 /* CustomSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		F59E2BB424576A3B0024A627 /* StoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59E2BB824576A3B0024A627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5EADD6624576FC600D5F5A2 /* StoneTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoneTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -127,6 +139,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F521CAB02461E2D5008B02C6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F521CAB12461E2EA008B02C6 /* MockProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		F53897FE2454C11300261666 /* Response Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +177,9 @@
 		F53898072455C76600261666 /* Feature Facts */ = {
 			isa = PBXGroup;
 			children = (
+				F521CAAE2461DEA9008B02C6 /* FactListViewModel.swift */,
 				F55F489D2457C5970052D8CC /* FactListWorker.swift */,
+				F521CAB3246226DC008B02C6 /* FactListSearchViewController.swift */,
 			);
 			path = "Feature Facts";
 			sourceTree = "<group>";
@@ -196,6 +218,7 @@
 		F5830D7D2454A57C000BD470 /* Stone */ = {
 			isa = PBXGroup;
 			children = (
+				F59905AF24635FEE005F8B60 /* View Componets */,
 				F5830DB02454A73C000BD470 /* AppDelegate */,
 				F538980A2455DD4600261666 /* Model */,
 				F53898072455C76600261666 /* Feature Facts */,
@@ -237,11 +260,37 @@
 		F5830DB12454A9F8000BD470 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F521CAB02461E2D5008B02C6 /* Protocol */,
 				F53897FE2454C11300261666 /* Response Model */,
 				F53898022454C83500261666 /* Client */,
 				F53898012454C82300261666 /* Core */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		F59905AF24635FEE005F8B60 /* View Componets */ = {
+			isa = PBXGroup;
+			children = (
+				F59905B324636F28005F8B60 /* SearcrController */,
+				F59905B02463600C005F8B60 /* SearchBar */,
+			);
+			path = "View Componets";
+			sourceTree = "<group>";
+		};
+		F59905B02463600C005F8B60 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				F59905B124636043005F8B60 /* CustomSearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		F59905B324636F28005F8B60 /* SearcrController */ = {
+			isa = PBXGroup;
+			children = (
+				F59905B424636F63005F8B60 /* CustomSearchController.swift */,
+			);
+			path = SearcrController;
 			sourceTree = "<group>";
 		};
 		F59E2BB524576A3B0024A627 /* StoneTests */ = {
@@ -257,6 +306,7 @@
 		F5EADD692457708000D5F5A2 /* Chuck Norris Facts */ = {
 			isa = PBXGroup;
 			children = (
+				F521CAAC2461DE9F008B02C6 /* FactViewModelTests.swift */,
 				F521CAAA2460526A008B02C6 /* FactListWorkerTest.swift */,
 			);
 			path = "Chuck Norris Facts";
@@ -479,10 +529,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F521CAAF2461DEA9008B02C6 /* FactListViewModel.swift in Sources */,
 				F53898042454C85100261666 /* ChuckNorrisFactst.swift in Sources */,
 				F55F489E2457C5970052D8CC /* FactListWorker.swift in Sources */,
+				F521CAB4246226DD008B02C6 /* FactListSearchViewController.swift in Sources */,
 				F53897F92454B5DA00261666 /* ApiRouter.swift in Sources */,
 				F56C921C24578E4C00F496DF /* Fact.swift in Sources */,
+				F521CAB22461E2EA008B02C6 /* MockProtocol.swift in Sources */,
+				F59905B524636F63005F8B60 /* CustomSearchController.swift in Sources */,
 				F538980624550D9400261666 /* ResponsePayload.swift in Sources */,
 				F596F603245C6AD0004A2401 /* ApiError.swift in Sources */,
 				F5830D832454A57C000BD470 /* ViewController.swift in Sources */,
@@ -490,6 +544,7 @@
 				F56C921A2457899D00F496DF /* Response.swift in Sources */,
 				F5830DB32454AA0A000BD470 /* API.swift in Sources */,
 				F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */,
+				F59905B224636043005F8B60 /* CustomSearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F521CAAD2461DE9F008B02C6 /* FactViewModelTests.swift in Sources */,
 				F521CAAB2460526A008B02C6 /* FactListWorkerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
