@@ -1,7 +1,7 @@
 import RxSwift
 import RxCocoa
 
-class FactListViewModel {
+final class FactListViewModel {
     
     var input: Input
     var output: Output
