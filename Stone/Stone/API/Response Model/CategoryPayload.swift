@@ -13,6 +13,6 @@ extension CategoryPayload: Decodable {
 
 extension CategoryPayload: MockProtocol {
     static func mock() -> CategoryPayload {
-        return CategoryPayload(category: ["Category 1", "Category 2", "Category 3", "Category 4"])
+        return CategoryPayload(category: ["Category 1"])
     }
 }

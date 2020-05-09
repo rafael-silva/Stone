@@ -7,7 +7,7 @@ protocol CustomSearchControllerDelegate: class {
 final class CustomSearchController: UISearchController {
     
     var customSearchBar: CustomSearchBar!
-    var customSearchDelegate: CustomSearchControllerDelegate?
+    weak var customSearchDelegate: CustomSearchControllerDelegate?
     
     //MARK: Init
     
