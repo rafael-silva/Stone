@@ -17,7 +17,7 @@ final class FactListViewModel {
     }
     
     
-    private var worker: FactListWorkerDataSource
+    private var worker: FactListWorkerDataSource    
     private let disposeBag = DisposeBag()
     
     init(worker: FactListWorkerDataSource) {
@@ -45,4 +45,5 @@ final class FactListViewModel {
         self.output = Output(facts: facts,
                              errorMessage: errorRelay.asDriver(onErrorJustReturn: "An error happened"))
     }
+    
 }

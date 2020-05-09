@@ -6,6 +6,7 @@ enum ApiRouter: URLRequestConvertible {
     //The endpoint name we'll call later
     
     case getFacts(term: String)
+    case getCategories
     
     //MARK: - URLRequestConvertible
     
@@ -22,7 +23,7 @@ enum ApiRouter: URLRequestConvertible {
         
         urlRequest.setValue(Constants.ContentType.json.rawValue, forHTTPHeaderField: Constants.HttpHeaderField.acceptType.rawValue)
         urlRequest.setValue(Constants.ContentType.json.rawValue, forHTTPHeaderField: Constants.HttpHeaderField.contentType.rawValue)
-
+        
         //Encoding
         
         let encoding: ParameterEncoding = {
@@ -44,6 +45,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .getFacts:
             return .get
+        case .getCategories:
+            return .get
         }
     }
     
@@ -54,6 +57,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .getFacts:
             return "search"
+        case .getCategories:
+            return "categories"
         }
     }
     
@@ -64,6 +69,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .getFacts(let term):
             return [Constants.Parameters.query : term]
+        case .getCategories:
+            return nil
         }
     }
 }

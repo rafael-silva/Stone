@@ -19,8 +19,13 @@
 		F53898042454C85100261666 /* ChuckNorrisFactst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53898032454C85100261666 /* ChuckNorrisFactst.swift */; };
 		F538980624550D9400261666 /* ResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538980524550D9400261666 /* ResponsePayload.swift */; };
 		F55F489E2457C5970052D8CC /* FactListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F489D2457C5970052D8CC /* FactListWorker.swift */; };
+		F568B2B82466E4D7001D4F94 /* CategoriesWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568B2B72466E4D7001D4F94 /* CategoriesWorkerTests.swift */; };
+		F568B2BA2466E717001D4F94 /* ChuckNorrisCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568B2B92466E717001D4F94 /* ChuckNorrisCategory.swift */; };
 		F56C921A2457899D00F496DF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56C92192457899D00F496DF /* Response.swift */; };
 		F56C921C24578E4C00F496DF /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56C921B24578E4C00F496DF /* Fact.swift */; };
+		F5729C6D2465CEA600B47563 /* CategoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5729C6C2465CEA600B47563 /* CategoriesWorker.swift */; };
+		F5729C6F2465CFF300B47563 /* CategoryPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5729C6E2465CFF300B47563 /* CategoryPayload.swift */; };
+		F5729C732465D2DA00B47563 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5729C722465D2DA00B47563 /* Category.swift */; };
 		F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830D7E2454A57C000BD470 /* AppDelegate.swift */; };
 		F5830D832454A57C000BD470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830D822454A57C000BD470 /* ViewController.swift */; };
 		F5830D862454A57C000BD470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5830D842454A57C000BD470 /* Main.storyboard */; };
@@ -68,8 +73,13 @@
 		F53898032454C85100261666 /* ChuckNorrisFactst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactst.swift; sourceTree = "<group>"; };
 		F538980524550D9400261666 /* ResponsePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePayload.swift; sourceTree = "<group>"; };
 		F55F489D2457C5970052D8CC /* FactListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactListWorker.swift; sourceTree = "<group>"; };
+		F568B2B72466E4D7001D4F94 /* CategoriesWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWorkerTests.swift; sourceTree = "<group>"; };
+		F568B2B92466E717001D4F94 /* ChuckNorrisCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisCategory.swift; sourceTree = "<group>"; };
 		F56C92192457899D00F496DF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F56C921B24578E4C00F496DF /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		F5729C6C2465CEA600B47563 /* CategoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWorker.swift; sourceTree = "<group>"; };
+		F5729C6E2465CFF300B47563 /* CategoryPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPayload.swift; sourceTree = "<group>"; };
+		F5729C722465D2DA00B47563 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F5830D7B2454A57C000BD470 /* Stone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5830D7E2454A57C000BD470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5830D822454A57C000BD470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				F538980524550D9400261666 /* ResponsePayload.swift */,
+				F5729C6E2465CFF300B47563 /* CategoryPayload.swift */,
 			);
 			path = "Response Model";
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				F53898032454C85100261666 /* ChuckNorrisFactst.swift */,
+				F568B2B92466E717001D4F94 /* ChuckNorrisCategory.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -177,8 +189,8 @@
 		F53898072455C76600261666 /* Feature Facts */ = {
 			isa = PBXGroup;
 			children = (
-				F521CAAE2461DEA9008B02C6 /* FactListViewModel.swift */,
 				F55F489D2457C5970052D8CC /* FactListWorker.swift */,
+				F521CAAE2461DEA9008B02C6 /* FactListViewModel.swift */,
 				F521CAB3246226DC008B02C6 /* FactListSearchViewController.swift */,
 			);
 			path = "Feature Facts";
@@ -189,8 +201,25 @@
 			children = (
 				F56C92192457899D00F496DF /* Response.swift */,
 				F56C921B24578E4C00F496DF /* Fact.swift */,
+				F5729C722465D2DA00B47563 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F568B2B62466E4A1001D4F94 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F568B2B72466E4D7001D4F94 /* CategoriesWorkerTests.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		F5729C6B2465CE7200B47563 /* Feature Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F5729C6C2465CEA600B47563 /* CategoriesWorker.swift */,
+			);
+			path = "Feature Categories";
 			sourceTree = "<group>";
 		};
 		F5830D722454A57C000BD470 = {
@@ -221,6 +250,7 @@
 				F59905AF24635FEE005F8B60 /* View Componets */,
 				F5830DB02454A73C000BD470 /* AppDelegate */,
 				F538980A2455DD4600261666 /* Model */,
+				F5729C6B2465CE7200B47563 /* Feature Categories */,
 				F53898072455C76600261666 /* Feature Facts */,
 				F5830DB12454A9F8000BD470 /* API */,
 				F5830DAF2454A664000BD470 /* Resources */,
@@ -260,10 +290,10 @@
 		F5830DB12454A9F8000BD470 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				F521CAB02461E2D5008B02C6 /* Protocol */,
-				F53897FE2454C11300261666 /* Response Model */,
 				F53898022454C83500261666 /* Client */,
 				F53898012454C82300261666 /* Core */,
+				F53897FE2454C11300261666 /* Response Model */,
+				F521CAB02461E2D5008B02C6 /* Protocol */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -296,6 +326,7 @@
 		F59E2BB524576A3B0024A627 /* StoneTests */ = {
 			isa = PBXGroup;
 			children = (
+				F568B2B62466E4A1001D4F94 /* Categories */,
 				F5EADD692457708000D5F5A2 /* Chuck Norris Facts */,
 				F5EADD6624576FC600D5F5A2 /* StoneTests-Bridging-Header.h */,
 				F59E2BB824576A3B0024A627 /* Info.plist */,
@@ -531,10 +562,13 @@
 			files = (
 				F521CAAF2461DEA9008B02C6 /* FactListViewModel.swift in Sources */,
 				F53898042454C85100261666 /* ChuckNorrisFactst.swift in Sources */,
+				F568B2BA2466E717001D4F94 /* ChuckNorrisCategory.swift in Sources */,
+				F5729C732465D2DA00B47563 /* Category.swift in Sources */,
 				F55F489E2457C5970052D8CC /* FactListWorker.swift in Sources */,
 				F521CAB4246226DD008B02C6 /* FactListSearchViewController.swift in Sources */,
 				F53897F92454B5DA00261666 /* ApiRouter.swift in Sources */,
 				F56C921C24578E4C00F496DF /* Fact.swift in Sources */,
+				F5729C6F2465CFF300B47563 /* CategoryPayload.swift in Sources */,
 				F521CAB22461E2EA008B02C6 /* MockProtocol.swift in Sources */,
 				F59905B524636F63005F8B60 /* CustomSearchController.swift in Sources */,
 				F538980624550D9400261666 /* ResponsePayload.swift in Sources */,
@@ -545,6 +579,7 @@
 				F5830DB32454AA0A000BD470 /* API.swift in Sources */,
 				F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */,
 				F59905B224636043005F8B60 /* CustomSearchBar.swift in Sources */,
+				F5729C6D2465CEA600B47563 /* CategoriesWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F568B2B82466E4D7001D4F94 /* CategoriesWorkerTests.swift in Sources */,
 				F521CAAD2461DE9F008B02C6 /* FactViewModelTests.swift in Sources */,
 				F521CAAB2460526A008B02C6 /* FactListWorkerTest.swift in Sources */,
 			);
