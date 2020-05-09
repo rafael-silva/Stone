@@ -20,4 +20,5 @@ final class FactListWorker: FactListWorkerDataSource {
                 payload.result.map({ Fact(output: $0) })
             })
     }
+    
 }

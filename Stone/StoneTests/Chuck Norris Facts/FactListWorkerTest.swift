@@ -175,13 +175,11 @@ class FactListWorkerTest: QuickSpec {
 }
 
 final class ApiFactsSpy: APIFactsProtocol {
-    
+   
     var response: ResponsePayload? = nil
     var error: ApiError = ApiError.unknownedError("Unknowned error.")
-    var getFactsCalled: Bool?
     
     func getFacts(term: String) -> Observable<ResponsePayload> {
-        getFactsCalled = true
         if let response = response {
             return Observable.just(response)
         } else {

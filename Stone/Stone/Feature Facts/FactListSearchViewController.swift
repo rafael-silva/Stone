@@ -12,27 +12,30 @@ final class FactListSearchViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     private let viewModel = FactListViewModel(worker: FactListWorker())
-    
     private var searchController: CustomSearchController!
     
-    private var factsList = [String]()
+    private var categories: [Category] = []
     
     //MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView?.dataSource = self
-        tableView?.delegate = self
+        //tableView?.dataSource = self
+        //tableView?.delegate = self
         tableView.separatorStyle = .none
         
-        load()
         configureSearchController()
+        
+        loadData()
     }
     
-    private func load() {
-        factsList = ["primeiro", "segundo", "terceiro", "quarto", "quinto"]
-        tableView?.reloadData()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    private func loadData() {
+        //TODOs: ler o arquivo do view model category
     }
     
     private func configureSearchController() {
@@ -47,11 +50,12 @@ final class FactListSearchViewController: UIViewController {
         tableView.tableHeaderView = searchController?.customSearchBar
         
         searchController?.customSearchDelegate = self
+        
     }
 }
 
 extension FactListSearchViewController: CustomSearchControllerDelegate {
-      
+    
     func didTouchOnSearchButton(_ searchBar: UISearchBar) {
         viewModel.output.facts.drive(onNext: { facts in
             print(facts)
@@ -61,26 +65,3 @@ extension FactListSearchViewController: CustomSearchControllerDelegate {
     }
     
 }
-
-extension FactListSearchViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return factsList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath as IndexPath)
-        
-        cell.textLabel?.text = factsList[indexPath.row]
-        
-        return cell
-    }
-}
-
-extension FactListSearchViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        //TODOs: Select category
-    }
-}
-
