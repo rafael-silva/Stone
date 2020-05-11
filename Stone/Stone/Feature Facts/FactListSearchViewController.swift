@@ -98,7 +98,11 @@ extension FactListSearchViewController: CustomSearchControllerDelegate {
 extension FactListSearchViewController: CategoryCustomCellDelegate {
     
     func didTouchOnCategory(_ text: String) {
-        searchController.customSearchBar.text = text
+        viewModel.output.facts.drive(onNext: { facts in
+            print(facts)
+        }).disposed(by: disposeBag)
+        viewModel.input.textInput.accept(text)
+        viewModel.input.reload.accept(())
     }
     
 }
