@@ -1,10 +1,10 @@
 import RxSwift
 
-protocol CategoriesWorkerDataSource: class {
+protocol CategoryListWorkerRemoteDataSource: class {
     func fetch() -> Observable<[FactCategory]>
 }
 
-final class CategoriestWorker: CategoriesWorkerDataSource {
+final class CategoryListWorker: CategoryListWorkerRemoteDataSource {
     
     private let api: APICategoryProtocol
     

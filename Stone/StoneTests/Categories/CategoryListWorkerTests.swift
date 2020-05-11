@@ -8,12 +8,12 @@ import RxBlocking
 
 private let expectedCategories = [FactCategory(category: "Category 1")]
 
-class CategoriesWorkerTests: QuickSpec {
+class CategoryListWorkerTests: QuickSpec {
     
     override func spec() {
         
         var scheduler: TestScheduler!
-        var sut_worker : CategoriestWorker!
+        var sut_worker : CategoryListWorker!
         var apiSpy: ApiCategorySpy!
         
         describe("CategoriesWorker") {
@@ -21,7 +21,7 @@ class CategoriesWorkerTests: QuickSpec {
             beforeEach {
                 scheduler = TestScheduler(initialClock: 0)
                 apiSpy = ApiCategorySpy()
-                sut_worker = CategoriestWorker(api: apiSpy)
+                sut_worker = CategoryListWorker(api: apiSpy)
             }
             
             describe("when 'fetcCategory' was called") {

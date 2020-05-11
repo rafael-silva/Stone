@@ -1,7 +1,7 @@
 import RxSwift
 import RxCocoa
 
-final class CategoriesViewModel {
+final class CategoryListViewModel {
     
     var input: Input
     var output: Output
@@ -15,10 +15,10 @@ final class CategoriesViewModel {
         let errorMessage: Driver<String>
     }
     
-    private var worker: CategoriesWorkerDataSource
+    private var worker: CategoryListWorkerRemoteDataSource
     private let disposeBag = DisposeBag()
     
-    init(worker: CategoriesWorkerDataSource) {
+    init(worker: CategoryListWorkerRemoteDataSource) {
         self.worker = worker
         
         let errorRelay = PublishRelay<String>()

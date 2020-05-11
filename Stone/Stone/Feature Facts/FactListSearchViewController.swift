@@ -34,15 +34,15 @@ final class FactListSearchViewController: UIViewController {
     }
     
     private func loadData() {
-        let viewM = CategoriesViewModel(worker: CategoriestWorker())
-                
+        let viewM = CategoryListViewModel(worker: CategoryListWorker())
+        
         viewM.output.categories.drive(onNext: { categories in
             self.categories = categories
             self.tableView.reloadData()
         }).disposed(by: disposeBag)
         
         viewM.output.errorMessage.drive(onNext: { errorMessage in
-        print("❌:\(errorMessage)\n")
+            print("❌:\(errorMessage)\n")
         }).disposed(by: disposeBag)
         
         viewM.input.reload.accept(())
@@ -65,7 +65,7 @@ final class FactListSearchViewController: UIViewController {
 }
 
 extension FactListSearchViewController: UITableViewDataSource {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -73,14 +73,13 @@ extension FactListSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCustonCell",
-                   for: indexPath) as! CategoryCustomCell
-               
+                                                 for: indexPath) as! CategoryCustomCell
+        
         cell.configure(with: Array(categories.choose(8)))
         cell.delegate = self
         
         return cell
     }
-    
     
 }
 
@@ -97,7 +96,9 @@ extension FactListSearchViewController: CustomSearchControllerDelegate {
 }
 
 extension FactListSearchViewController: CategoryCustomCellDelegate {
+    
     func didTouchOnCategory(_ text: String) {
         searchController.customSearchBar.text = text
     }
+    
 }
