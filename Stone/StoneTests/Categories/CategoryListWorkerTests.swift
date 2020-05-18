@@ -6,14 +6,14 @@ import RxBlocking
 
 @testable import Stone
 
-private let expectedCategories = [Category(category: "Teste")]
+private let expectedCategories = [FactCategory(category: "Category 1")]
 
-class CategoriesWorkerTests: QuickSpec {
+class CategoryListWorkerTests: QuickSpec {
     
     override func spec() {
         
         var scheduler: TestScheduler!
-        var sut_worker : CategoriestWorker!
+        var sut_worker : CategoryListWorker!
         var apiSpy: ApiCategorySpy!
         
         describe("CategoriesWorker") {
@@ -21,7 +21,7 @@ class CategoriesWorkerTests: QuickSpec {
             beforeEach {
                 scheduler = TestScheduler(initialClock: 0)
                 apiSpy = ApiCategorySpy()
-                sut_worker = CategoriestWorker(api: apiSpy)
+                sut_worker = CategoryListWorker(api: apiSpy)
             }
             
             describe("when 'fetcCategory' was called") {
@@ -29,7 +29,20 @@ class CategoriesWorkerTests: QuickSpec {
                 context("and the request was completed with a valid response") {
                     
                     it("then should return a response") {
-                        //TODOs: request sucess
+                        apiSpy.response = CategoryPayload.mock()
+                        
+                        let observer = scheduler.createObserver([FactCategory].self)
+                        
+                        let disposable = sut_worker.fetch()
+                            .asObservable()
+                            .subscribe(observer)
+                        
+                        scheduler.scheduleAt(TestScheduler.Defaults.disposed, action: disposable.dispose)
+                        scheduler.start()
+                        
+                        let newResponse = observer.events.first?.value.element
+                        
+                        expect(newResponse).to(equal(expectedCategories))
                     }
                 }
                 
@@ -149,6 +162,7 @@ class CategoriesWorkerTests: QuickSpec {
                         expect(responseError.description).to(equal("Unknowned error."))
                     }
                 }
+                
             }
         }
     }
@@ -159,10 +173,8 @@ final class ApiCategorySpy: APICategoryProtocol {
     
     var response: CategoryPayload? = nil
     var error: ApiError = ApiError.unknownedError("Unknowned error.")
-    var retryCount: Int? = 0
     
     func getCategories() -> Observable<CategoryPayload> {
-        retryCount = +1
         if let response = response {
             return Observable.just(response)
         } else {

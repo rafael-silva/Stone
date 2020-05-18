@@ -14,15 +14,14 @@ final class FactListSearchViewController: UIViewController {
     private let viewModel = FactListViewModel(worker: FactListWorker())
     private var searchController: CustomSearchController!
     
-    private var categories: [Category] = []
+    private var categories: [FactCategory] = []
     
     //MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView?.dataSource = self
-        //tableView?.delegate = self
+        tableView.dataSource = self
         tableView.separatorStyle = .none
         
         configureSearchController()
@@ -35,14 +34,25 @@ final class FactListSearchViewController: UIViewController {
     }
     
     private func loadData() {
-        //TODOs: ler o arquivo do view model category
+        let viewM = CategoryListViewModel(worker: CategoryListWorker())
+        
+        viewM.output.categories.drive(onNext: { categories in
+            self.categories = categories
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        
+        viewM.output.errorMessage.drive(onNext: { errorMessage in
+            print("❌:\(errorMessage)\n")
+        }).disposed(by: disposeBag)
+        
+        viewM.input.reload.accept(())
     }
     
     private func configureSearchController() {
         searchController = CustomSearchController(searchResultsController: self,
                                                   searchBarFrame: CGRect(x: 0.0, y: 0.0,
                                                                          width: tableView.frame.size.width, height: 50.0),
-                                                  searchBarFont: UIFont.boldSystemFont(ofSize: 14),
+                                                  searchBarFont: .boldSystemFont(ofSize: 14),
                                                   searchBarTextColor: .lightGray,
                                                   searchBarTintColor: .white)
         
@@ -54,6 +64,25 @@ final class FactListSearchViewController: UIViewController {
     }
 }
 
+extension FactListSearchViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCustonCell",
+                                                 for: indexPath) as! CategoryCustomCell
+        
+        cell.configure(with: Array(categories.choose(8)))
+        cell.delegate = self
+        
+        return cell
+    }
+    
+}
+
 extension FactListSearchViewController: CustomSearchControllerDelegate {
     
     func didTouchOnSearchButton(_ searchBar: UISearchBar) {
@@ -61,6 +90,18 @@ extension FactListSearchViewController: CustomSearchControllerDelegate {
             print(facts)
         }).disposed(by: disposeBag)
         viewModel.input.textInput.accept(searchBar.text)
+        viewModel.input.reload.accept(())
+    }
+    
+}
+
+extension FactListSearchViewController: CategoryCustomCellDelegate {
+    
+    func didTouchOnCategory(_ text: String) {
+        viewModel.output.facts.drive(onNext: { facts in
+            print(facts)
+        }).disposed(by: disposeBag)
+        viewModel.input.textInput.accept(text)
         viewModel.input.reload.accept(())
     }
     

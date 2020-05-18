@@ -16,7 +16,6 @@ final class FactListViewModel {
         let errorMessage: Driver<String>
     }
     
-    
     private var worker: FactListWorkerDataSource    
     private let disposeBag = DisposeBag()
     

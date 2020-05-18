@@ -1,10 +1,10 @@
 import RxSwift
 
-protocol CategoriesWorkerDataSource: class {
-    func fetch() -> Observable<[Category]>
+protocol CategoryListWorkerRemoteDataSource: class {
+    func fetch() -> Observable<[FactCategory]>
 }
 
-final class CategoriestWorker: CategoriesWorkerDataSource {
+final class CategoryListWorker: CategoryListWorkerRemoteDataSource {
     
     private let api: APICategoryProtocol
     
@@ -12,11 +12,11 @@ final class CategoriestWorker: CategoriesWorkerDataSource {
         self.api = api
     }
     
-    func fetch() -> Observable<[Category]> {
+    func fetch() -> Observable<[FactCategory]> {
         return self.api.getCategories()
             .observeOn(MainScheduler.instance)
             .map({  payload in
-                    payload.category.map({ Category(category: $0) })
+                    payload.category.map({ FactCategory(category: $0) })
         })
     }
     
