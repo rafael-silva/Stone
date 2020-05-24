@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+@available(iOS 13.0, *)
 final class FactListSearchViewController: UIViewController {
     
     //MARK: Life IBOutlets
@@ -64,6 +65,7 @@ final class FactListSearchViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension FactListSearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,6 +85,7 @@ extension FactListSearchViewController: UITableViewDataSource {
     
 }
 
+@available(iOS 13.0, *)
 extension FactListSearchViewController: CustomSearchControllerDelegate {
     
     func didTouchOnSearchButton(_ searchBar: UISearchBar) {
@@ -95,6 +98,7 @@ extension FactListSearchViewController: CustomSearchControllerDelegate {
     
 }
 
+@available(iOS 13.0, *)
 extension FactListSearchViewController: CategoryCustomCellDelegate {
     
     func didTouchOnCategory(_ text: String) {

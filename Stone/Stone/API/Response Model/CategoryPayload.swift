@@ -1,18 +1,27 @@
 import Foundation
+import RealmSwift
 
-struct CategoryPayload {
-    let category: [String]
+
+@objcMembers
+final class CategoryPayload: Object {
+    dynamic var id = 0
+    dynamic var category = List<String>()
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 extension CategoryPayload: Decodable {
-    init(from decoder: Decoder) throws {
+    convenience init(from decoder: Decoder) throws {
+        self.init()
         let values = try decoder.singleValueContainer()
-        category = try values.decode([String].self)
+        category = try values.decode(List<String>.self)
     }
 }
 
 extension CategoryPayload: MockProtocol {
     static func mock() -> CategoryPayload {
-        return CategoryPayload(category: ["Category 1"])
+        return CategoryPayload(value: ["Category 1"])
     }
 }

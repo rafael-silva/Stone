@@ -1,5 +1,6 @@
 import UIKit
 
+@available(iOS 13.0, *)
 final class CustomSearchBar: UISearchBar {
     
     //MARK: Properties

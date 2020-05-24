@@ -202,7 +202,7 @@ class CategoryListViewModelTests: XCTestCase {
 }
 
 private class CategoriesWorkerSpy: CategoryListWorkerRemoteDataSource {
-
+    
     var categories: [FactCategory]?
     var error: ApiError = ApiError.unknownedError("")
     
@@ -212,6 +212,11 @@ private class CategoriesWorkerSpy: CategoryListWorkerRemoteDataSource {
         } else {
             return Observable.error(error)
         }
+    }
+    
+    func updateLocalDataFromApi() -> Completable {
+        //TODOs: Build test
+        return Completable.error(error)
     }
 }
 

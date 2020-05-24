@@ -4,6 +4,7 @@ protocol CustomSearchControllerDelegate: class {
     func didTouchOnSearchButton(_ searchBar: UISearchBar)
 }
 
+@available(iOS 13.0, *)
 final class CustomSearchController: UISearchController {
     
     var customSearchBar: CustomSearchBar!
@@ -45,6 +46,7 @@ final class CustomSearchController: UISearchController {
 
 // MARK: - UISearchBarDelegate
 
+@available(iOS 13.0, *)
 extension CustomSearchController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

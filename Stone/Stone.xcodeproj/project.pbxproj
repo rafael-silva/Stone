@@ -43,6 +43,15 @@
 		F59905B224636043005F8B60 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59905B124636043005F8B60 /* CustomSearchBar.swift */; };
 		F59905B524636F63005F8B60 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59905B424636F63005F8B60 /* CustomSearchController.swift */; };
 		F59E5B6F2468D5B000438D85 /* CategoryListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59E5B6E2468D5B000438D85 /* CategoryListViewModelTests.swift */; };
+		F5CD0B37247339CF001E0B41 /* PastSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B36247339CF001E0B41 /* PastSearch.swift */; };
+		F5CD0B3A2474557B001E0B41 /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B392474557B001E0B41 /* DataManagerProtocol.swift */; };
+		F5CD0B3D24745643001E0B41 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B3C24745643001E0B41 /* Storable.swift */; };
+		F5CD0B4024745D0D001E0B41 /* Sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B3F24745D0D001E0B41 /* Sorted.swift */; };
+		F5CD0B4224745FAF001E0B41 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B4124745FAF001E0B41 /* RealmDataManager.swift */; };
+		F5CD0B45247466C9001E0B41 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B44247466C9001E0B41 /* RealmError.swift */; };
+		F5CD0B4724746F02001E0B41 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B4624746F02001E0B41 /* RealmProvider.swift */; };
+		F5CD0B492474755D001E0B41 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B482474755D001E0B41 /* URLExtension.swift */; };
+		F5CD0B4B24757508001E0B41 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD0B4A24757508001E0B41 /* RealmExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +119,15 @@
 		F59E2BB424576A3B0024A627 /* StoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59E2BB824576A3B0024A627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59E5B6E2468D5B000438D85 /* CategoryListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModelTests.swift; sourceTree = "<group>"; };
+		F5CD0B36247339CF001E0B41 /* PastSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearch.swift; sourceTree = "<group>"; };
+		F5CD0B392474557B001E0B41 /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
+		F5CD0B3C24745643001E0B41 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		F5CD0B3F24745D0D001E0B41 /* Sorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorted.swift; sourceTree = "<group>"; };
+		F5CD0B4124745FAF001E0B41 /* RealmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
+		F5CD0B44247466C9001E0B41 /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		F5CD0B4624746F02001E0B41 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		F5CD0B482474755D001E0B41 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		F5CD0B4A24757508001E0B41 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		F5EADD6624576FC600D5F5A2 /* StoneTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoneTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBE7B9F7042B09144AA80B88 /* Pods-StoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoneTests.release.xcconfig"; path = "Target Support Files/Pods-StoneTests/Pods-StoneTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				F50A0530246764C4005A1699 /* ArrayExtension.swift */,
+				F5CD0B482474755D001E0B41 /* URLExtension.swift */,
+				F5CD0B4A24757508001E0B41 /* RealmExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +244,7 @@
 				F56C92192457899D00F496DF /* Response.swift */,
 				F56C921B24578E4C00F496DF /* Fact.swift */,
 				F5729C722465D2DA00B47563 /* FactCategory.swift */,
+				F5CD0B36247339CF001E0B41 /* PastSearch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +301,7 @@
 				F5729C6B2465CE7200B47563 /* Feature Categories */,
 				F53898072455C76600261666 /* Feature Facts */,
 				F5830DB12454A9F8000BD470 /* API */,
+				F5CD0B3824743D26001E0B41 /* Realm */,
 				F5830DAF2454A664000BD470 /* Resources */,
 				F5830D822454A57C000BD470 /* ViewController.swift */,
 				F5830D842454A57C000BD470 /* Main.storyboard */,
@@ -385,6 +407,43 @@
 				F59E2BB824576A3B0024A627 /* Info.plist */,
 			);
 			path = StoneTests;
+			sourceTree = "<group>";
+		};
+		F5CD0B3824743D26001E0B41 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD0B43247466B5001E0B41 /* Core */,
+				F5CD0B3B24745632001E0B41 /* Protocol */,
+				F5CD0B3E24745CE4001E0B41 /* Realm Model */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		F5CD0B3B24745632001E0B41 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD0B392474557B001E0B41 /* DataManagerProtocol.swift */,
+				F5CD0B3C24745643001E0B41 /* Storable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F5CD0B3E24745CE4001E0B41 /* Realm Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD0B3F24745D0D001E0B41 /* Sorted.swift */,
+			);
+			path = "Realm Model";
+			sourceTree = "<group>";
+		};
+		F5CD0B43247466B5001E0B41 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD0B4124745FAF001E0B41 /* RealmDataManager.swift */,
+				F5CD0B44247466C9001E0B41 /* RealmError.swift */,
+				F5CD0B4624746F02001E0B41 /* RealmProvider.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		F5EADD692457708000D5F5A2 /* Chuck Norris Facts */ = {
@@ -618,6 +677,9 @@
 				F568B2BA2466E717001D4F94 /* ChuckNorrisCategory.swift in Sources */,
 				F5729C732465D2DA00B47563 /* FactCategory.swift in Sources */,
 				F55F489E2457C5970052D8CC /* FactListWorker.swift in Sources */,
+				F5CD0B3D24745643001E0B41 /* Storable.swift in Sources */,
+				F5CD0B45247466C9001E0B41 /* RealmError.swift in Sources */,
+				F5CD0B4724746F02001E0B41 /* RealmProvider.swift in Sources */,
 				F521CAB4246226DD008B02C6 /* FactListSearchViewController.swift in Sources */,
 				F53897F92454B5DA00261666 /* ApiRouter.swift in Sources */,
 				F56C921C24578E4C00F496DF /* Fact.swift in Sources */,
@@ -627,16 +689,22 @@
 				F59905B524636F63005F8B60 /* CustomSearchController.swift in Sources */,
 				F538980624550D9400261666 /* ResponsePayload.swift in Sources */,
 				F59709F92467298B00155C37 /* CategoryCustomCell.swift in Sources */,
+				F5CD0B4224745FAF001E0B41 /* RealmDataManager.swift in Sources */,
+				F5CD0B37247339CF001E0B41 /* PastSearch.swift in Sources */,
 				F596F603245C6AD0004A2401 /* ApiError.swift in Sources */,
 				F59709F424671DA000155C37 /* CategoryListViewModel.swift in Sources */,
 				F5830D832454A57C000BD470 /* ViewController.swift in Sources */,
 				F53897FD2454BF6600261666 /* Constants.swift in Sources */,
 				F56C921A2457899D00F496DF /* Response.swift in Sources */,
+				F5CD0B4B24757508001E0B41 /* RealmExtension.swift in Sources */,
 				F59709FD246734A400155C37 /* CategoryCollectionView.swift in Sources */,
 				F5830DB32454AA0A000BD470 /* API.swift in Sources */,
+				F5CD0B4024745D0D001E0B41 /* Sorted.swift in Sources */,
 				F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */,
 				F59905B224636043005F8B60 /* CustomSearchBar.swift in Sources */,
+				F5CD0B492474755D001E0B41 /* URLExtension.swift in Sources */,
 				F5729C6D2465CEA600B47563 /* CategoryListWorker.swift in Sources */,
+				F5CD0B3A2474557B001E0B41 /* DataManagerProtocol.swift in Sources */,
 				F59709F7246727CA00155C37 /* CategoryCell.swift in Sources */,
 				F50A0531246764C4005A1699 /* ArrayExtension.swift in Sources */,
 			);
@@ -753,6 +821,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -806,6 +875,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
