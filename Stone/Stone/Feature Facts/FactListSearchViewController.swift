@@ -43,7 +43,7 @@ final class FactListSearchViewController: UIViewController {
         }).disposed(by: disposeBag)
         
         viewM.output.errorMessage.drive(onNext: { errorMessage in
-            print("❌:\(errorMessage)\n")
+            print("❌:\(errorMessage.description)\n")
         }).disposed(by: disposeBag)
         
         viewM.input.reload.accept(())

@@ -84,12 +84,12 @@ extension RealmDataManager: DataManagerProtocol {
         }
     }
     
-    func deleteAll<T>(_ object: T.Type) -> Completable where T : Storable {
+    func deleteAll<T>(_ modal: T.Type) -> Completable where T : Storable {
         return Completable.create { observer in
-            if let realm = self.realm, let object = object as? Object.Type {
+            if let realm = self.realm, let modal = modal as? Object.Type {
                 do {
                     try realm.write {
-                        let objects = realm.objects(object)
+                        let objects = realm.objects(modal)
                         for object in objects {
                             realm.delete(object)
                         }
@@ -107,8 +107,8 @@ extension RealmDataManager: DataManagerProtocol {
     
     func fetch<T: Storable>(_ object: T.Type, predicate: NSPredicate?, sorted: Sorted?) -> Observable<[T]> {
         return Observable<[T]>.create { observer in
-            if let realm = self.realm, let model = object as? Object.Type {
-                var objects = realm.objects(model)
+            if let realm = self.realm, let object = object as? Object.Type {
+                var objects = realm.objects(object)
                 
                 if let predicate = predicate {
                     objects = objects.filter(predicate)
@@ -141,10 +141,10 @@ extension RealmDataManager: DataManagerProtocol {
         }
     }
     
-    func objects<T>(ofType type: T.Type) -> Observable<[T]> where T: Object {
+    func objects<T>(_ model: T.Type) -> Observable<[T]> where T: Object {
         return Observable
             .from(optional: self.realm)
-            .objects(type)
+            .objects(model)
     }
     
 }

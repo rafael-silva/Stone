@@ -1,16 +1,5 @@
 import RxSwift
 import RealmSwift
-import Realm
-
-//extension Realm: ReactiveCompatible {}
-
-extension Reactive where Base == Realm {
-//    
-//    static func objects<T>(ofType type: T.Type, realmOpen: @escaping () throws -> Realm = Realm.init) -> Observable<[T]> where T: Object {
-//        return Observable
-//            .from { _ in try realmOpen()} as! ImmediateSchedulerType
-//    }
-}
 
 extension ObservableType where Element == Realm {
     

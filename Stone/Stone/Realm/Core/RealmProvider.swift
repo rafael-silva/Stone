@@ -9,6 +9,8 @@ struct RealmProvider {
     
     //MARK: Init
     
+    /// Initialise RealmProvider
+    /// - Parameter config: Storage Configuration
     internal init(config: Realm.Configuration) {
         configuration = config
     }
@@ -34,10 +36,14 @@ struct RealmProvider {
     
     //MARK: - Realm Instances
     
+    /// Initialise RealmProvider context
+    /// - Parameter `default`: will initialize realm with the defaultConfig instance
     public static var `default`: Realm? = {
         return RealmProvider(config: RealmProvider.defaultConfig).realm
     }()
     
+    /// Initialise RealmProvider context
+    /// - Parameter `main`: will initialize realm with the mainConfig instance
     public static var main: Realm? = {
         return RealmProvider(config: RealmProvider.mainConfig).realm
     }()

@@ -17,7 +17,7 @@ final class CategoryListWorker: CategoryListWorkerRemoteDataSource {
     }
     
     func fetch() -> Observable<[FactCategory]> {
-        return self.dbManager.objects(ofType: CategoryPayload.self)
+        return self.dbManager.objects(CategoryPayload.self)
             .observeOn(MainScheduler.instance)
             .map { $0.first?.category.map { FactCategory(category: $0) } ?? []}
     }
@@ -26,9 +26,7 @@ final class CategoryListWorker: CategoryListWorkerRemoteDataSource {
         return self.api.getCategories()
             .observeOn(MainScheduler.instance)
             .flatMap({ payload in
-                return self.dbManager.save(object: payload)
-                    .observeOn(MainScheduler.instance)
+                self.dbManager.save(object: payload)
             }).asCompletable()
     }
-
 }
