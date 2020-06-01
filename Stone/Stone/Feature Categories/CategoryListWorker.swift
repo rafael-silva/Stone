@@ -2,7 +2,8 @@ import RxSwift
 import RealmSwift
 
 protocol CategoryListWorkerRemoteDataSource: class {
-    func fetch() -> Observable<[FactCategory]>
+    func fetchCategories() -> Observable<[FactCategory]>
+    func fetchPastSearches() -> Observable<[PastSearch]>
     func updateLocalDataFromApi() -> Completable
 }
 
@@ -16,17 +17,23 @@ final class CategoryListWorker: CategoryListWorkerRemoteDataSource {
         self.dbManager = dbManager
     }
     
-    func fetch() -> Observable<[FactCategory]> {
+    func fetchCategories() -> Observable<[FactCategory]> {
         return self.dbManager.objects(CategoryPayload.self)
             .observeOn(MainScheduler.instance)
             .map { $0.first?.category.map { FactCategory(category: $0) } ?? []}
+    }
+    
+    func fetchPastSearches() -> Observable<[PastSearch]> {
+        return self.dbManager.objects(PastSearchPayload.self)
+            .observeOn(MainScheduler.instance)
+            .map{ $0.map { PastSearch(term: $0.term)}}
     }
     
     func updateLocalDataFromApi() -> Completable {
         return self.api.getCategories()
             .observeOn(MainScheduler.instance)
             .flatMap({ payload in
-                self.dbManager.save(object: payload)
+                self.dbManager.update(object: payload)
             }).asCompletable()
     }
 }

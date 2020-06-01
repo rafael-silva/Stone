@@ -34,6 +34,8 @@
 		F5830D8B2454A57E000BD470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5830D892454A57E000BD470 /* LaunchScreen.storyboard */; };
 		F5830DA12454A57E000BD470 /* StoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830DA02454A57E000BD470 /* StoneUITests.swift */; };
 		F5830DB32454AA0A000BD470 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5830DB22454AA0A000BD470 /* API.swift */; };
+		F584245A247D851F00FB5A3D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5842459247D851F00FB5A3D /* UIViewControllerExtension.swift */; };
+		F591372C247BE95800B63537 /* PastSearchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591372B247BE95800B63537 /* PastSearchPayload.swift */; };
 		F596F603245C6AD0004A2401 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596F602245C6AD0004A2401 /* ApiError.swift */; };
 		F59709F424671DA000155C37 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59709F324671DA000155C37 /* CategoryListViewModel.swift */; };
 		F59709F7246727CA00155C37 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59709F6246727CA00155C37 /* CategoryCell.swift */; };
@@ -108,6 +110,8 @@
 		F5830DA02454A57E000BD470 /* StoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneUITests.swift; sourceTree = "<group>"; };
 		F5830DA22454A57E000BD470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5830DB22454AA0A000BD470 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F5842459247D851F00FB5A3D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F591372B247BE95800B63537 /* PastSearchPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchPayload.swift; sourceTree = "<group>"; };
 		F596F602245C6AD0004A2401 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		F59709F324671DA000155C37 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
 		F59709F6246727CA00155C37 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				F50A0530246764C4005A1699 /* ArrayExtension.swift */,
 				F5CD0B482474755D001E0B41 /* URLExtension.swift */,
 				F5CD0B4A24757508001E0B41 /* RealmExtension.swift */,
+				F5842459247D851F00FB5A3D /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				F538980524550D9400261666 /* ResponsePayload.swift */,
 				F5729C6E2465CFF300B47563 /* CategoryPayload.swift */,
+				F591372B247BE95800B63537 /* PastSearchPayload.swift */,
 			);
 			path = "Response Model";
 			sourceTree = "<group>";
@@ -696,8 +702,10 @@
 				F5830D832454A57C000BD470 /* ViewController.swift in Sources */,
 				F53897FD2454BF6600261666 /* Constants.swift in Sources */,
 				F56C921A2457899D00F496DF /* Response.swift in Sources */,
+				F584245A247D851F00FB5A3D /* UIViewControllerExtension.swift in Sources */,
 				F5CD0B4B24757508001E0B41 /* RealmExtension.swift in Sources */,
 				F59709FD246734A400155C37 /* CategoryCollectionView.swift in Sources */,
+				F591372C247BE95800B63537 /* PastSearchPayload.swift in Sources */,
 				F5830DB32454AA0A000BD470 /* API.swift in Sources */,
 				F5CD0B4024745D0D001E0B41 /* Sorted.swift in Sources */,
 				F5830D7F2454A57C000BD470 /* AppDelegate.swift in Sources */,

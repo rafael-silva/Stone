@@ -32,7 +32,7 @@ extension RealmDataManager: DataManagerProtocol {
             if let realm = self.realm, let object = object as? Object {
                 do {
                     try realm.write {
-                        realm.add(object, update: .modified)
+                        realm.add(object)
                     }
                     observer(.completed)
                     

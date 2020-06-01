@@ -202,7 +202,7 @@ class CategoryListViewModelTests: XCTestCase {
 }
 
 private class CategoriesWorkerSpy: CategoryListWorkerRemoteDataSource {
-    
+        
     var categories: [FactCategory]?
     var error: ApiError = ApiError.unknownedError("")
     

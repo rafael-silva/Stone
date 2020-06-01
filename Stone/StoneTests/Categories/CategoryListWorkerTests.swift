@@ -33,7 +33,7 @@ class CategoryListWorkerTests: QuickSpec {
                         
                         let observer = scheduler.createObserver([FactCategory].self)
                         
-                        let disposable = sut_worker.fetch()
+                        let disposable = sut_worker.fetchCategories()
                             .asObservable()
                             .subscribe(observer)
                         
@@ -53,7 +53,7 @@ class CategoryListWorkerTests: QuickSpec {
                         
                         let errorMessage = scheduler.createObserver(String.self)
                         
-                        let disposable = sut_worker.fetch()
+                        let disposable = sut_worker.fetchCategories()
                             .asObservable()
                             .subscribe(onNext: { _ in
                             }, onError: { error in
@@ -78,7 +78,7 @@ class CategoryListWorkerTests: QuickSpec {
                         
                         let errorMessage = scheduler.createObserver(String.self)
                         
-                        let disposable = sut_worker.fetch()
+                        let disposable = sut_worker.fetchCategories()
                             .asObservable()
                             .subscribe(onNext: { _ in
                             }, onError: { error in
@@ -101,7 +101,7 @@ class CategoryListWorkerTests: QuickSpec {
                         
                         let errorMessage = scheduler.createObserver(String.self)
                         
-                        let disposable = sut_worker.fetch()
+                        let disposable = sut_worker.fetchCategories()
                             .asObservable()
                             .subscribe(onNext: { _ in
                             }, onError: { error in
@@ -124,7 +124,7 @@ class CategoryListWorkerTests: QuickSpec {
                         
                         let errorMessage = scheduler.createObserver(String.self)
                         
-                        let disposable = sut_worker.fetch()
+                        let disposable = sut_worker.fetchCategories()
                             .asObservable()
                             .subscribe(onNext: { _ in
                             }, onError: { error in
@@ -147,7 +147,7 @@ class CategoryListWorkerTests: QuickSpec {
                         
                         let errorMessage = scheduler.createObserver(String.self)
                         
-                        let disposable = sut_worker.fetch()
+                        let disposable = sut_worker.fetchCategories()
                             .asObservable()
                             .subscribe(onNext: { _ in
                             }, onError: { error in

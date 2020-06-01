@@ -13,11 +13,11 @@ final class CategoryCustomCell: UITableViewCell {
 
     //MARK: Properties
     
-    private var categoryList = [FactCategory]()
+    private var categoryList = [String]()
     
     //MARK: Public Methods
     
-    func configure(with categoryList: [FactCategory]) {
+    func configure(with categoryList: [String]) {
         self.categoryList = categoryList
         collectionView.reloadData()
         collectionView.layoutIfNeeded()
@@ -36,14 +36,14 @@ extension CategoryCustomCell: UICollectionViewDataSource, UICollectionViewDelega
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CategoryCollectionCell
         
-        cell.configure(with: categoryList[indexPath.row].category)
+        cell.configure(with: categoryList[indexPath.row])
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let text = categoryList[indexPath.row].category
+        let text = categoryList[indexPath.row]
         let cellWidth = text.size(withAttributes:[.font: UIFont.systemFont(ofSize:12.0)]).width + 30.0
         
         return CGSize(width: cellWidth, height: 30.0)
@@ -55,7 +55,7 @@ extension CategoryCustomCell: UICollectionViewDataSource, UICollectionViewDelega
 extension CategoryCustomCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didTouchOnCategory(categoryList[indexPath.row].category)
+        delegate?.didTouchOnCategory(categoryList[indexPath.row])
     }
 }
 
