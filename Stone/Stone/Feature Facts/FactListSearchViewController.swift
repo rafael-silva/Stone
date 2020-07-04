@@ -43,33 +43,17 @@ final class FactListSearchViewController: UIViewController {
     
     private func loadData() {
         
+        viewM.output.sectionItems.drive(onNext: { items in
+                self.sections = [Section(type: .suggestions, items: items.catogories),
+                                 Section(type: .pastSearches, items: items.pastSearch.unique())]
+                self.tableView.reloadData()
+
+        }).disposed(by: disposeBag)
         
-//        viewM.output.categoryDictionary.drive(onNext: { teste in
-//            for (key, values) in teste {
-//                let array = Array(teste)
-//                print("🇹🇫: \(key)")
-//                print("🇸🇬: \(values)")
-//
-//            }
-//            self.tableView.reloadData()
-//            
-//        }).disposed(by: disposeBag)
-//        
-//        viewM.output.categories.drive(onNext: { categories in
-//            self.sections = [Section(type: .suggestions, items: categories.map({$0.category}).unique())]
-//            self.tableView.reloadData()
-//            
-//        }).disposed(by: disposeBag)
-//        
-//        viewM.output.pastSearches.drive(onNext: { searches in
-//            self.sections.append(contentsOf: [Section(type: .pastSearches, items: searches.map({$0.term}).unique())])
-//            self.tableView.reloadData()
-//        }).disposed(by: disposeBag)
-//        
-//        viewM.output.errorMessage.drive(onNext: { errorMessage in
-//            self.presentAlert(errorMessage, title: "Ops!")
-//        }).disposed(by: disposeBag)
-        
+        viewM.output.errorMessage.drive(onNext: { errorMessage in
+            self.presentAlert(errorMessage, title: "Ops!")
+        }).disposed(by: disposeBag)
+        //
         viewM.input.reload.accept(())
         
     }

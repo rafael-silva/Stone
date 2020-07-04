@@ -20,7 +20,8 @@ final class CategoryListWorker: CategoryListWorkerRemoteDataSource {
     func fetchCategories() -> Observable<[String]> {
         return self.dbManager.objects(CategoryPayload.self)
             .observeOn(MainScheduler.instance)
-            .map { $0.first?.category.map { $0 } ?? []}
+            .map { $0.first?.category.map { $0 } ?? [] }
+            .distinctUntilChanged()
     }
     
     func fetchPastSearches() -> Observable<[String]> {

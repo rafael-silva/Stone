@@ -5,37 +5,28 @@ protocol CategoryListViewModelType {
     associatedtype Input
     associatedtype Output
     
-    var input : Input { get }
-    var output : Output { get }
+    var input: Input { get }
+    var output: Output { get }
 }
 
 final class CategoryListViewModel:  CategoryListViewModelType {
     
     var input: CategoryListViewModel.Input
     var output: CategoryListViewModel.Output
+    var isFirst: Bool = true
     
     struct Input {
         let reload: PublishRelay<Void>
     }
-    let reload: PublishRelay<Void>
     
     struct Output {
         let sectionItems: Driver<Item>
+        var errorMessage: Driver<String>
     }
     
     struct Item {
         let catogories: [String]
-        let pastSearch: [String]
-    }
-    
-     enum SectionType: String {
-        case suggestions = "Suggestions"
-        case pastSearches = "Past Searches"
-    }
-    
-     struct Section {
-        let type: SectionType
-        let items: [String]
+        var pastSearch: [String]
     }
     
     private var worker: CategoryListWorkerRemoteDataSource
@@ -51,17 +42,32 @@ final class CategoryListViewModel:  CategoryListViewModelType {
             .combineLatest(reloadRelay.asObservable(), worker.fetchCategories(), worker.fetchPastSearches())
             .map { ($0.1, $0.2) }
             .map { catogories, pastSearch in
-                print(catogories)
-                print(pastSearch)
                 return Item(catogories: catogories, pastSearch: pastSearch)
         }
         .do(onError: { [errorRelay] error in
             errorRelay.accept((error as? ApiError)?.description ?? error.localizedDescription)
         })
+        .asDriver(onErrorJustReturn: Item(catogories: [], pastSearch: []))
         
         self.input = Input(reload: reloadRelay)
-        self.output = Output(sectionItems: sections)
-
-     }
+        self.output = Output(sectionItems: sections,
+                             errorMessage: errorRelay.asDriver(onErrorJustReturn: "An error happened"))
+        
+        if isFirst {
+            self.updateData()
+        }
+    }
     
+    private func updateData() {
+        let errorRelay = PublishRelay<String>()
+        
+        worker.updateLocalDataFromApi()
+            .subscribe(onCompleted: {
+                self.isFirst = false
+            }, onError: { error in
+                errorRelay.accept((error as? ApiError)?.description ?? error.localizedDescription)
+            }).disposed(by: disposeBag)
+        
+        self.output.errorMessage = errorRelay.asDriver(onErrorJustReturn: "An error happened")
+    }
 }
